@@ -10,12 +10,12 @@ l_motor=70;
 n_aletas=3;
 l_aletas=20;
 a_aletas=15;
-e_aletas=e_cuerpo;
+e_aletas=1;
 
 
 n_refuerzos=12;
 e_refuerzos=3*e_cuerpo;
-resalte_refuerzos=e_refuerzos;
+resalte_refuerzos=3;
 fa=1;
 
 DEBUG=false;
