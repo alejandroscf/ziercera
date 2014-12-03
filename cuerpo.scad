@@ -13,19 +13,19 @@ a_aletas=15;
 e_aletas=e_cuerpo;
 
 
-n_refuerzos=3;
+n_refuerzos=12;
 e_refuerzos=3*e_cuerpo;
 resalte_refuerzos=e_refuerzos;
+fa=1;
 
-
-DEBUG=true;
+DEBUG=false;
 
 difference(){
 union(){
 // Cuerpo del cohete
 difference(){
-   cylinder(r=r_cuerpo, h=l_cuerpo);
-	translate ([0,0,-l_cuerpo/2]) cylinder(r=r_cuerpo-e_cuerpo, h=2*l_cuerpo);
+   cylinder(r=r_cuerpo, h=l_cuerpo, $fa=fa);
+	translate ([0,0,-l_cuerpo/2]) cylinder(r=r_cuerpo-e_cuerpo, h=2*l_cuerpo, $fa=fa);
    }
 
 // Agare del motor
@@ -55,7 +55,7 @@ difference(){
       //   cube([e_aletas,a_aletas+e_cuerpo,l_aletas]);
       translate([-e_aletas/2,0,0])
          rotate([0,-90,0])
-            linear_extrude (height=e_refuerzos)
+            linear_extrude (height=e_aletas)
                polygon([
                   [0,r_cuerpo-e_cuerpo],
                   [0,r_cuerpo+a_aletas],
