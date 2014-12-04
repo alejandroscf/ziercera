@@ -1,4 +1,23 @@
 include <config.scad>;
+include <paraboloid.scad>;
+
+//height of paraboloid
+y=30+2*e_cuerpo+2 ; //[0:100]
+
+//focus distance
+f=2;	//[0:100]
+
+//center paraboloid position
+fc=0;	// [1,0]
+
+//radius of the focus area :
+rfa=0 ;//[0:100]
+
+// detail = $fn of cone
+detail=60; //[44:240]
+
+
+// Nose
 
 
 DEBUG=false;
@@ -55,8 +74,13 @@ cylinder(d=d_motor,h=2*l_motor+0.01,center=true);
 
 
 
-
-
-
 if (DEBUG) {translate ([0,-1000,-500])cube([1000,1000,1000]);}
 }
+
+
+// Cono
+difference(){
+translate([80,0,y])rotate([180,0,0])paraboloid (y, f, rfa, fc, detail);
+translate([80,0,y-e_cuerpo])rotate([180,0,0])paraboloid (y, f, rfa, fc, detail);
+}
+//translate([80,0,0])cylinder(r=r_cuerpo,h=10);
