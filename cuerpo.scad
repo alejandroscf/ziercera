@@ -42,7 +42,7 @@ difference(){
                polygon([
                   [0,r_cuerpo-e_cuerpo],
                   [0,r_cuerpo+a_aletas],
-                  [l_aletas*0.5,r_cuerpo+a_aletas],
+                  [l_aletas*0.2,r_cuerpo+a_aletas],
                   [l_aletas,r_cuerpo-e_cuerpo]
                ]);
       }
