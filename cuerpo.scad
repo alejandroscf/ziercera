@@ -57,5 +57,5 @@ difference(){
   cylinder(d=d_motor,h=2*l_motor+0.01,center=true);
 }
   
-//nose();
+nose();
 
