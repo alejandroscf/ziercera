@@ -11,21 +11,6 @@
 //Edited by Takuya Yamaguchi for making customaizable.
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-//height of paraboloid
-y=50 ; //[0:100]
-
-//focus distance
-f=10;	//[0:100]
-
-//center paraboloid position
-fc=1;	// [1,0]
-
-//radius of the focus area :
-rfa=0 ;//[0:100]
-
-// detail = $fn of cone
-detail=120; //[44:240]
-
 module paraboloid (y, f, rfa, fc, detail){
 	// y = height of paraboloid
 	// f = focus distance 
